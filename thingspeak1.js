@@ -1,4 +1,4 @@
-export const datathingspeak = [100,200,300,400];
+export let datathingspeak = [];
 
 // const data2 = [];
 
@@ -12,7 +12,7 @@ function call() {
       success: function(response) {
         var pr = document.getElementById("field1");
 		    pr.innerText = response +  " L/min";
-        // datathingspeak.push(response);
+        datathingspeak.push(response);
       },
       error: function() {
         $('#errors').text("There was an error processing your request. Please try again.");

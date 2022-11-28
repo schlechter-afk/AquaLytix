@@ -127,8 +127,8 @@
 										<div class="ps-3">
 											<h6 id="field1"></h6>
 											<!--here we need to modify-->
-											<span class="text-success small pt-1 fw-bold">12%</span> <span
-												class="text-muted small pt-2 ps-1">increase</span>
+											<!-- <span class="text-success small pt-1 fw-bold">12%</span> <span
+												class="text-muted small pt-2 ps-1">increase</span> -->
 										</div>
 									</div>
 								</div>
@@ -204,8 +204,8 @@
 										<div class="ps-3">
 											<h6 id="field2"></h6>
 											<!---modify here-->
-											<span class="text-danger small pt-1 fw-bold">12%</span> <span
-												class="text-muted small pt-2 ps-1">decrease</span>
+											<!-- <span class="text-danger small pt-1 fw-bold">12%</span> <span
+												class="text-muted small pt-2 ps-1">decrease</span> -->
 
 										</div>
 									</div>
@@ -222,7 +222,7 @@
 					<!-- Reports -->
 					<div class="col-12">
 						<div class="card">
-							<div class="filter">
+							<!-- <div class="filter">
 								<a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
 								<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
 									<li class="dropdown-header text-start">
@@ -233,40 +233,27 @@
 									<li><a class="dropdown-item" href="#">This Month</a></li>
 									<li><a class="dropdown-item" href="#">This Year</a></li>
 								</ul>
-							</div>
+							</div> -->
 
 							<div class="card-body">
 								<h5 class="card-title">Flow-Rate [L/min]</h5>
 
 								<!-- Line Chart -->
-								<div id="reportsChart"></div>
-							
-								<!-- <script>
-									var options = {
-										chart: {
-											type: 'line'
-										},
-										series: [{
-											name: 'Litres',
-											// data: {
-											// 	labels: datathingspeak,
-											// }
-										}],
-										xaxis: {
-											categories: [1, 2, 3, 4, 5]
-										},
-										title: {
-											display: true,
-											// text: 'Flow-Rate'
-										}
-
-									}
-									var chart = new ApexCharts(document.querySelector("#reportsChart"), options);
-									chart.render();
-
-								</script> -->
-								<!-- End Line Chart -->
+								<div id="chartjs1_div">
+									<canvas id="chartjs1"></canvas>
+								</div>
 							</div>
+							<!-- <script src="data_1.js" type="module"></script> -->
+							<form class="form1">
+									Enter start interval:
+									a : <input type="date" id="A" >
+									Enter end interval:
+									b : <input type="date" id="B" >			
+								<button type="button" onclick="uploading(document.getElementById('A').value,document.getElementById('B').value)">Submit</button>
+							</form>
+
+	                       <script src="data_1.js" ></script>
+
 						</div>
 					</div><!-- End Reports -->
 
@@ -274,7 +261,7 @@
 
 					<div class="col-12">
 						<div class="card">
-							<div class="filter">
+							<!-- <div class="filter">
 								<a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
 								<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
 									<li class="dropdown-header text-start">
@@ -285,38 +272,24 @@
 									<li><a class="dropdown-item" href="#">This Month</a></li>
 									<li><a class="dropdown-item" href="#">This Year</a></li>
 								</ul>
-							</div>
+							</div> -->
 
 							<div class="card-body">
-								<h5 class="card-title">Volume-Flow [L]</h5>
+								<h5 class="card-title">Volume-Flow [mL]</h5>
 
 								<!-- Line Chart -->
-								<div id="reportsChart2"></div>
-								<!-- <script>
-									var options = {
-										chart: {
-											type: 'bar'
-										},
-										series: [{
-											name: 'Litres',
-											data: [0, 0.8, 0.4, 0.6, 0.8, 1]
-										}],
-										xaxis: {
-											categories: [1, 2, 3, 4, 5]
-										},
-										title: {
-											display: true,
-											// text: 'Flow-Rate'
-										}
-
-									}
-									var chart = new ApexCharts(document.querySelector("#reportsChart2"), options);
-									chart.render();
-
-								</script> -->
-								<!-- End Line Chart -->
-
+								<div id="chartjs2_div">
+									<canvas id="chartjs2"></canvas>
+								</div>
 							</div>
+							<form class="form1">
+								Enter start interval:
+								a : <input type="date" id="day1" >
+								Enter end interval:
+								b : <input type="date" id="day2" >			
+							<button type="button" onclick="uploading2(document.getElementById('day1').value,document.getElementById('day2').value)">Submit</button>
+							</form>
+					   		<script src="data_2.js" ></script>
 						</div>
 					</div><!-- End Reports -->
 
@@ -416,11 +389,11 @@
 		</div>
 		<div class="credits">
 			<!-- All the links in the footer should remain intact. -->
-			<!-- You can delete the links only if you purchased the pro version. -->
-			<!-- Licensing information: https://bootstrapmade.com/license/ -->
-			<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-			<!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-		<!-- </div> -->
+	<!-- You can delete the links only if you purchased the pro version. -->
+	<!-- Licensing information: https://bootstrapmade.com/license/ -->
+	<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+	<!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+	<!-- </div> -->
 	<!-- </footer>End Footer --> -->
 
 	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -437,8 +410,7 @@
 	<script src="thingspeak1.js" type="module"></script>
 	<script src="thingspeak2.js" type="module"></script>
 	<script src="importdata1.js" type="module"> </script>
-	<script src="apexchart.js" type="module"></script>
-
+	<!-- <script src="apexchart.js" type="module"></script> -->
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
 
