@@ -1,0 +1,25 @@
+body
+{
+	background-color: chartreuse;
+}
+
+/* .new{ */
+	/* float: left; */
+/* } */
+
+
+#im
+{
+	margin-left: 35%;
+	height: 50vh;
+	width: 50vh;
+	margin-bottom: 10vh;
+}
+
+pre{
+	font-weight: bold;
+	font-size: 40px;
+	padding: 0;
+	margin: 0;
+	position: relative;right: 100px;
+}

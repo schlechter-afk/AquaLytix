@@ -69,7 +69,7 @@
 				</a>
 			</li><!-- End Dashboard Nav -->
 			<li class="nav-item">
-				<a class="nav-link " href="index.html">
+				<a class="nav-link " href="aboutus.html">
 					<i class="bi bi-globe"></i>
 					<span>About Us</span>
 				</a>
@@ -246,9 +246,9 @@
 							<!-- <script src="data_1.js" type="module"></script> -->
 							<form class="form1">
 									Enter start interval:
-									a : <input type="date" id="A" >
+									a : <input type="datetime-local" id="A" >
 									Enter end interval:
-									b : <input type="date" id="B" >			
+									b : <input type="datetime-local" id="B" >			
 								<button type="button" onclick="uploading(document.getElementById('A').value,document.getElementById('B').value)">Submit</button>
 							</form>
 
@@ -284,9 +284,9 @@
 							</div>
 							<form class="form1">
 								Enter start interval:
-								a : <input type="date" id="day1" >
+								a : <input type="datetime-local" id="day1" >
 								Enter end interval:
-								b : <input type="date" id="day2" >			
+								b : <input type="datetime-local" id="day2" >			
 							<button type="button" onclick="uploading2(document.getElementById('day1').value,document.getElementById('day2').value)">Submit</button>
 							</form>
 					   		<script src="data_2.js" ></script>
@@ -308,74 +308,8 @@
 								</ul>
 							</div>
 
-							<div class="card-body">
-								<h5 class="card-title">Hourly-Volume [L]</h5>
-
-								<!-- Line Chart -->
-								<div id="reportsChart3"></div>
-								<!-- <script>
-									var options1 = {
-										chart: {
-											type: 'bar'
-										},
-										series: [{
-											name: 'Litres',
-											data: [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5]
-										}],
-										xaxis: {
-											categories: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
-										},
-										title: {
-											display: true,
-											// text: 'Flow-Rate [L/min]'
-										}
-
-									}
-									var chart = new ApexCharts(document.querySelector("#reportsChart3"), options1);
-									chart.render();
-
-								</script> -->
-								<!-- End Line Chart -->
-
-							</div>
 						</div>
-					</div><!-- End Reports -->
-
-					<div class="col-12">
-						<div class="card">
-
-							<div class="card-body">
-								<h5 class="card-title">Daywise Volume-Flow Last Week [L]</h5>
-
-								<!-- Line Chart -->
-								<div id="reportsChart4"></div>
-								<!-- <script>
-									var options = {
-										chart: {
-											type: 'line'
-										},
-										series: [{
-											name: 'Litres',
-											data: [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2]
-										}],
-										xaxis: {
-											categories: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-										},
-										title: {
-											display: true,
-											// text: 'Flow-Rate'
-										}
-
-									}
-									var chart = new ApexCharts(document.querySelector("#reportsChart4"), options);
-									chart.render();
-
-								</script> -->
-								<!-- End Line Chart -->
-
-							</div>
-						</div>
-					</div><!-- End Reports -->
+					</div>
 
 		</section>
 
