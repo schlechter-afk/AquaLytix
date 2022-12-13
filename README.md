@@ -1,6 +1,6 @@
-# ESW_Monsoon2022
+# Water-Flow-Management
 
-Code For Website Created for data analysis and display through meaningful graphs using ChartJS.
+Entire Code used for the website created for data analysis and display of Water Flow through meaningful graphs using ChartJS.
 
 Dashboard:
 
